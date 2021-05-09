@@ -1,0 +1,17 @@
+{% extends "shortener/base.html" %}
+{% block content %}
+    {% if ShortURL != None %}
+        <h3 class="fadeIn second">Your shortened URL:</h3>
+        <p class="fadeIn third">/shorted/{{ ShortURL }}</p>
+        <br>
+    {% endif %}
+    <h1 class="fadeIn first">URL Shortener</h1>
+    <br>
+    <form method="post"> {% csrf_token %}
+        <label for="url"></label><input type="text" id="id_url" class="fadeIn first" name="url" placeholder="Place your URL here">
+        {% for error in errors %}
+            <p class="fadeIn third">{{ error|striptags }}</p>
+        {% endfor %}
+        <input type="submit" class="fadeIn second" value="Short URL" />
+    </form>
+{% endblock %}

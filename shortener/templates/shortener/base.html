@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% load static %}
+        <link rel="stylesheet" href="{% static "shortener/core.css" %}">
+        <title>Shortener</title>
+    </head>
+    <body>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                {% block content %}
+                    Block Content
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
