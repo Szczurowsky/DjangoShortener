@@ -20,6 +20,7 @@ There's nothing to say. It's just simple URL shortener with database support.
 ## Setup
 - Clone repository `https://github.com/Szczurowsky/djangoShortener`
 - Place into Django directory
+- Install required packages: `pip install validators` 
 - Add url to app in main url file. `path('', include('shortener.urls'))`
 - Enjoy
 
