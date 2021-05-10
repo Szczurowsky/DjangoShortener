@@ -2,6 +2,7 @@ from django.test import TestCase
 from ..forms import ShortUrlForm
 from ..models import UrlList
 
+
 class ValidationTestCase(TestCase):
     def test_validation(self):
         # With valid url
