@@ -34,6 +34,6 @@ def url_redirect(request, id):
         context = {
             'NotFound': "I'm sorry but we didn't have this URL in our database.",
         }
-        return render(request, "shortener/notFound.html", context)
+        return render(request, "shortener/notFound.html", context, status=404)
 
 
